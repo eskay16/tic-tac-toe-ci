@@ -1,0 +1,22 @@
+{
+  "name": "tac_toe_console",
+  "version": "1.0.0",
+  "description": "Console tic-tac-toe game with Jest tests and GitHub Actions CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:ci": "jest --ci --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "index.js"
+    ]
+  }
+}
