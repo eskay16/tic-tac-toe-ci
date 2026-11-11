@@ -49,7 +49,7 @@ function GamePlay(boardFactory = Gameboard) {
     playerMove();
     if (playerTurn.value === gameboard[row][column].getCellValue())
       changeTurn();
-    const winner = CheckWinner();
+    const winner = CheckWinner(getGameBoard());
     if(winner){
         console.log(winner === players[0].value? `The winner is ${players[0].name}`: `The winner is ${players[1].name}` )
         return;
