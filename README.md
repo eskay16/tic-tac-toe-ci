@@ -8,6 +8,6 @@ Every push to `main` runs the tests automatically with **GitHub Actions**
 
 ```bash
 npm install
-npm test          # quick run
-npm run test:ci   # with a coverage report, same as CI
+npm test         
+npm run test:ci   
 ```
