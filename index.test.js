@@ -78,3 +78,31 @@ describe('CheckWinner unit Tests', () => {
     expect(CheckWinner(board)).toBe("X");
   });
 });
+describe("CheckWinner edge cases", () => {
+  test("detects anti-diagonal win for O", () => {
+    const board = [
+      ["X", "X", "O"],
+      ["", "O", ""],
+      ["O", "", "X"],
+    ];
+    expect(CheckWinner(board)).toBe("O");
+  });
+
+  test("detects middle column win for X", () => {
+    const board = [
+      ["O", "X", ""],
+      ["", "X", "O"],
+      ["", "X", ""],
+    ];
+    expect(CheckWinner(board)).toBe("X");
+  });
+
+  test("returns undefined for a full board with no winner (draw)", () => {
+    const board = [
+      ["X", "O", "X"],
+      ["X", "O", "O"],
+      ["O", "X", "X"],
+    ];
+    expect(CheckWinner(board)).toBeUndefined();
+  });
+});
